@@ -25,7 +25,7 @@ const NavrBar = () => {
           <h3>SUPERARE</h3>
         </Link>
         <div className="nav__btn">
-          <button className="btn nav__btn">Buy Now</button>
+          <button className="btn nav__btn__buy">Buy Now</button>
           <div className="icon" onClick={() => setIsNavShowing(!isNavShowing)}>
             {isNavShowing ? <MdOutlineClose /> : <FaBars />}
           </div>

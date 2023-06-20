@@ -153,6 +153,10 @@ header{
   background: linear-gradient(90deg,var(--color__400),var(--color__500));
   border: 1px solid transparent;
 }
+.hero__section img{
+  width: 100%;
+  height: 100%;
+}
 
 
 
@@ -213,6 +217,171 @@ header{
 .two_to_1__grid{
   grid-template-columns: 1fr ;
   place-items: center;
+
+}
+.left__content{
+  padding-left: 0;
+
+}
+.left__content h2{
+  font-size: 4.6rem;
+  padding: 1rem 0;
+  text-align: center;
+}
+.left__content p{
+  font-size: 1.3rem;
+  text-align: center;
+}
+.ctn__group{
+  justify-content: center;
+  gap: 1rem;
+}
+
+
+}
+
+
+/* =============================== media 768 ================== */
+@media (max-width:768px) {
+  section{
+    padding: 3rem 1rem;
+  }
+  .container{
+    width: 90%;
+  }
+  
+  /*  ===================== NavBar ===============  */
+  .nav__container{
+    width: 90%;
+    padding: 1.5rem .5rem;
+  }
+  .nav__link a {
+    font-size: 1.5rem;
+    
+  }
+  .logo{
+    font-size: 1.3rem;
+  }
+  .btn{
+    font-size: .8rem;
+  }
+  /* ============================= hero Section ================= */
+.left__content h2{
+  font-size: 4.4rem;
+}
+.left__content p{
+  font-size: 1.2rem;
+}
+
+}
+/* =============================== media 658 ================== */
+@media (max-width:658px) {
+  section{
+    padding: 3rem 1rem;
+  }
+  .container{
+    width: 90%;
+  }
+  
+  /*  ===================== NavBar ===============  */
+  .nav__container{
+    width: 92%;
+    padding: 1.5rem .5rem;
+  }
+  .nav__link a {
+    font-size: 1.2rem;
+    
+  }
+  .logo{
+    font-size: 1.2rem;
+  }
+  /* ============================= hero Section ================= */
+.left__content h2{
+  font-size: 4rem;
+}
+.left__content p{
+  font-size: 1.1rem;
+}
+
+}
+/* =============================== media 425 ================== */
+@media (max-width:425px) {
+  .btn{
+    padding: .5rem 1.2rem;
+    font-size: .9rem;
+    font-weight: 500;
+  }
+  .icon{
+    font-size: 1.3rem;
+  }
+  
+  section{
+    padding: 3rem 1rem;
+  }
+  .container{
+    width: 90%;
+  }
+  .nav__btn__buy{
+    padding: .4rem 1rem;
+
+  }
+  
+  /*  ===================== NavBar ===============  */
+  .nav__container{
+    width: 94%;
+    padding: 1.5rem .5rem;
+  }
+  .nav__link a {
+    font-size: 1.1rem;
+    
+  }
+  .logo{
+    font-size: 1.1rem;
+  }
+  /* ============================= hero Section ================= */
+.left__content h2{
+  font-size: 3.4rem;
+}
+.left__content p{
+  font-size: 1rem;
+}
+
+}
+/* =============================== media 349 ================== */
+@media (max-width:349px) {
+  .icon{
+    font-size: 1.3rem;
+  }
+  
+  .container{
+    width: 97%;
+  }
+  /*  ===================== NavBar ===============  */
+  .nav__container{
+    width: 97%;
+    padding: 1.5rem .5rem;
+  }
+  .nav__link a {
+    font-size: 1rem;
+    
+  }
+  .logo{
+    font-size: 1rem;
+  }
+  .nav__btn{
+    gap: .7rem;
+  }
+  
+  /* ============================= hero Section ================= */
+.left__content h2{
+  font-size: 2.2rem;
+  padding: .7rem 0;
+
+}
+.left__content p{
+  padding: .7rem 0;
+
+  font-size: .7rem;
 }
 
 }
