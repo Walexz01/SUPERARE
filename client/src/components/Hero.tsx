@@ -1,4 +1,4 @@
-import heroImage from "../assets/Screenshot 2023-06-19 210553.png";
+import heroImage from "../assets/hero_image.png";
 const Hero = () => {
   return (
     <section className="hero__section">

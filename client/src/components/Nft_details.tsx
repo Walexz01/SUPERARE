@@ -1,6 +1,6 @@
 import Card from "./Card";
-import image1 from "../assets/Screenshot 2023-06-19 210624.jpg";
-import image2 from "../assets/download.jfif";
+import image1 from "../assets/Magdiel Lopez 15.png";
+import image2 from "../assets/Magdiel Lopez 17.png";
 import image3 from "../assets/download (1).jfif";
 
 const Nft_details = () => {
