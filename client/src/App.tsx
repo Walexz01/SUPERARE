@@ -1,4 +1,6 @@
+import Faqs from "./components/Faqs";
 import Hero from "./components/Hero";
+import Join from "./components/Join";
 import NavrBar from "./components/NavrBar";
 import NewWaves from "./components/NewWaves";
 import Nft_details from "./components/Nft_details";
@@ -13,6 +15,8 @@ function App() {
       <Partners />
       <NewWaves />
       <Nft_details />
+      <Faqs />
+      <Join />
     </div>
   );
 }
