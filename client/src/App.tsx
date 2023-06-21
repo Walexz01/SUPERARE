@@ -1,4 +1,5 @@
 import Faqs from "./components/Faqs";
+import FavoriteChar from "./components/FavoriteChar";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Join from "./components/Join";
@@ -16,6 +17,7 @@ function App() {
       <Partners />
       <NewWaves />
       <Nft_details />
+      <FavoriteChar />
       <Faqs />
       <Join />
       <Footer />

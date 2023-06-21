@@ -5,7 +5,7 @@ interface Props {
   answer: string;
 }
 const Faq = ({ question, answer }: Props) => {
-  const [showAnswer, setSetshowAnswer] = useState(true);
+  const [showAnswer, setSetshowAnswer] = useState(false);
   return (
     <div className="faq">
       <div className="question" onClick={() => setSetshowAnswer(!showAnswer)}>

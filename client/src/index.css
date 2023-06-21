@@ -167,10 +167,24 @@ header{
   background: linear-gradient(90deg,var(--color__400),var(--color__500));
   border: 1px solid transparent;
 }
+.hero__section--right{
+  position: relative;
+  
+}
 .hero__section img{
   width: 100%;
   height: 100%;
   position: relative;
+}
+.hero__section .hero__section--right::before{
+  content: '';
+  position: absolute;
+  background: url(assets/Mystery-Item-B.png);
+  top: 2rem;
+  bottom: 0;
+  left: -1.5rem;
+  width: 100%;
+  right: 0;
 }
 /* ================================================== partners__section ================= */
 .partners__section{
@@ -394,6 +408,26 @@ header{
 .bottom__link a{
   font-size: 1rem;
   text-decoration: underline;
+}
+/* ====================== favoriteChar__sections ======================= */
+.favoriteChar__sections{
+  background: var(--color__800);
+}
+.avatar__list{
+  padding:2rem 0 1rem 0;
+}
+.slide__image_con{
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+.slide__image_con img{
+  width: 100%;
+
 }
 /* =============================== media 1024 ================== */
 @media (max-width:1024px) {
@@ -774,6 +808,12 @@ header{
 .join__left h2{
   font-size: 2.2rem;
 }
+.hero__section .hero__section--right::before{
+  content: '';
+  position: absolute;
+  background: none;
+}
+
 
 }
 
