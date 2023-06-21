@@ -1,4 +1,5 @@
 import Faqs from "./components/Faqs";
+import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Join from "./components/Join";
 import NavrBar from "./components/NavrBar";
@@ -17,6 +18,7 @@ function App() {
       <Nft_details />
       <Faqs />
       <Join />
+      <Footer />
     </div>
   );
 }
