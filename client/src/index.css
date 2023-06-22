@@ -36,6 +36,7 @@ a{
   --color__1200:#241c2b;
   --color__1300:#98255c;
   --color__1400:#000000;
+  --color__1500:#5429FF;
     
 }
 section{
@@ -46,7 +47,9 @@ section{
 .container{
   width: 80%;
 }
-
+img{
+  width: 100%;
+}
 /*  ===================== NavBar ===============  */
 header{
   background-image: linear-gradient(170deg,var(--color__100),var(--color__300));
