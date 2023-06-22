@@ -2,7 +2,9 @@ import { createBrowserRouter } from "react-router-dom";
 import App from "./App";
 import LandingPage from "./layout/LandingPage";
 import Home from "./pages/home/Home";
-import Auth from "./pages/auth/Auth";
+import Auth from "./layout/Auth";
+import Login from "./pages/auth/Login";
+import Signup from "./pages/auth/Signup";
 
 const router = createBrowserRouter([
   {
@@ -14,7 +16,7 @@ const router = createBrowserRouter([
         element: <LandingPage />,
         children: [
           {
-            path: "/",
+            index: true,
             element: <Home />,
           },
         ],
@@ -22,6 +24,16 @@ const router = createBrowserRouter([
       {
         path: "auth",
         element: <Auth />,
+        children: [
+          {
+            index: true,
+            element: <Login />,
+          },
+          {
+            path: "signup",
+            element: <Signup />,
+          },
+        ],
       },
     ],
   },
