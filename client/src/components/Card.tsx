@@ -1,11 +1,6 @@
-interface Props {
-  heading: string;
-  body: string;
-  image: string;
-  className: string;
-}
+import { nft_detail } from "../data/Nft_details";
 
-const Card = ({ heading, body, image, className }: Props) => {
+const Card = ({ heading, body, image, className }: nft_detail) => {
   return (
     <div className={`card ${className}`}>
       <div className="card__details">

@@ -1,10 +1,8 @@
 import { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
-interface Props {
-  question: string;
-  answer: string;
-}
-const Faq = ({ question, answer }: Props) => {
+import { QA } from "../data/Q&A";
+
+const Faq = ({ question, answer }: QA) => {
   const [showAnswer, setSetshowAnswer] = useState(false);
   return (
     <div className="faq">

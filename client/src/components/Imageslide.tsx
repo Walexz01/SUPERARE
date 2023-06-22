@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import SlideimageContainer from "./SlideimageContainer";
 import { useEffect, useState } from "react";
+import { images } from "../data/Imagesslide";
 
 export default () => {
   const [slidesPerView, setSlidesPerView] = useState(0);
@@ -27,18 +28,14 @@ export default () => {
 
   return (
     <Swiper spaceBetween={50} slidesPerView={slidesPerView}>
-      <SwiperSlide>
-        <SlideimageContainer />
-      </SwiperSlide>
-      <SwiperSlide>
-        <SlideimageContainer />
-      </SwiperSlide>
-      <SwiperSlide>
-        <SlideimageContainer />
-      </SwiperSlide>
-      <SwiperSlide>
-        <SlideimageContainer />
-      </SwiperSlide>
+      {images.map(({ image, backgroundcolor }, index) => (
+        <SwiperSlide key={index}>
+          <SlideimageContainer
+            image={image}
+            backgroundcolor={backgroundcolor}
+          />
+        </SwiperSlide>
+      ))}
     </Swiper>
   );
 };

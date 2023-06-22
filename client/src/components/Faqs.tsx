@@ -1,3 +1,4 @@
+import { QAs } from "../data/Q&A";
 import Faq from "./Faq";
 
 const Faqs = () => {
@@ -10,18 +11,9 @@ const Faqs = () => {
           answered.
         </div>
         <div className="faqs">
-          <Faq
-            question="What is an NFT"
-            answer="Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat autem consequatur reprehenderit perspiciatis tempora ad iure veniam eligendi iusto alias."
-          />
-          <Faq
-            question="What is an NFT"
-            answer="Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat autem consequatur reprehenderit perspiciatis tempora ad iure veniam eligendi iusto alias."
-          />
-          <Faq
-            question="What is an NFT"
-            answer="Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat autem consequatur reprehenderit perspiciatis tempora ad iure veniam eligendi iusto alias."
-          />
+          {QAs.map(({ question, answer }, index) => (
+            <Faq question={question} answer={answer} key={index} />
+          ))}
         </div>
       </div>
     </section>

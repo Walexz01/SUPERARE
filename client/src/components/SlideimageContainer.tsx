@@ -1,8 +1,11 @@
-import image from "../assets/Clone X 11.png";
+import { slideimage } from "../data/Imagesslide";
 
-const SlideimageContainer = () => {
+const SlideimageContainer = ({ image, backgroundcolor }: slideimage) => {
   return (
-    <div className="slide__image_con">
+    <div
+      className="slide__image_con"
+      style={{ backgroundColor: backgroundcolor }}
+    >
       <img src={image} alt="" />
     </div>
   );
