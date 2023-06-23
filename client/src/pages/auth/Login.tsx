@@ -2,8 +2,16 @@ import { Link } from "react-router-dom";
 import Formheading from "../../components/Formheading";
 import Inputgroup from "../../components/Inputgroup";
 import Acct__question from "../../components/Acct__question";
-
+import { useState } from "react";
+interface Logininput {
+  email: string;
+  password: string;
+}
 const Login = () => {
+  const [userInput, setUserInput] = useState<Logininput>({
+    email: "",
+    password: "",
+  });
   return (
     <>
       <Formheading
@@ -16,12 +24,20 @@ const Login = () => {
           label="Email"
           type="email"
           placeholder="Enter your email"
+          value={userInput.email}
+          setValue={(e) =>
+            setUserInput({ ...userInput, email: e.currentTarget.value })
+          }
         />
         <Inputgroup
           id="password"
           label="Password"
           type="password"
           placeholder="Enter your password"
+          value={userInput.password}
+          setValue={(e) =>
+            setUserInput({ ...userInput, password: e.currentTarget.value })
+          }
         />
         <span className="forgot__pass">
           <Link to={""}>Forgot Password?</Link>
