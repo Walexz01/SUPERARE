@@ -4,11 +4,11 @@ import { Outlet } from "react-router-dom";
 
 const LandingPage = () => {
   return (
-    <>
+    <div className="app">
       <NavrBar />
       <Outlet />
       <Footer />
-    </>
+    </div>
   );
 };
 

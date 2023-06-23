@@ -10,13 +10,13 @@ const PORT = process.env.PORT || 300;
 
 const auth = require("./routes/auth");
 
+app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 app.use(helmet());
 app.use(morgan("common"));
 app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
 app.use(express.json());
-app.use(cookieParser());
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {

@@ -1,3 +1,4 @@
+const jwt = require("jsonwebtoken");
 const pool = require("../config/connection");
 const bcrypt = require("bcrypt");
 
@@ -28,13 +29,17 @@ const registerUser = async (req, res) => {
   try {
     const { fullname, username, email, password } = req.body;
 
-    if (!fullname || !username || !email || !password)
-      res.status(400).send({ error: "All fields are required" });
+    if (!fullname || !username || !email || !password) {
+      return res.status(400).send({ error: "All fields are required" });
+    }
 
     const user = await getuser(email, username);
 
-    if (user.length)
-      res.status(409).send("User already exists with this username or email!");
+    if (user.length) {
+      return res
+        .status(409)
+        .send("User already exists with this username or email!");
+    }
     const salt = await bcrypt.genSalt();
 
     const hashedPassword = await bcrypt.hash(password, salt);
@@ -46,4 +51,49 @@ const registerUser = async (req, res) => {
     res.json(error);
   }
 };
-module.exports = { registerUser };
+
+// Login User
+// getuserbyemail
+
+async function getUserByEmail(email) {
+  try {
+    const q = `SELECT * FROM users WHERE email = ? `;
+    const [result] = await pool.query(q, [email]);
+    return result;
+  } catch (error) {
+    return error;
+  }
+}
+
+const LoginUser = async (req, res) => {
+  try {
+    const { email, password } = req.body;
+    if (!email || !password) {
+      return res.status(400).send({ error: "All fields are required" });
+    }
+    const [user] = await getUserByEmail(email);
+
+    if (!user) {
+      return res.status(404).send("User doesn't exist!");
+    }
+    const compare = await bcrypt.compare(password, user.password);
+    if (!compare) {
+      return res.status(400).send("Wrong Email or Password");
+    }
+
+    const token = jwt.sign(
+      { id: user.id, username: user.user_name, fullname: user.full_name },
+      process.env.JWT_KEY
+    );
+    res.status(200).cookie("access_token", token, { httpOnly: true }).json({
+      id: user.id,
+      fullname: user.full_name,
+      username: user.user_name,
+      email: user.email,
+      image: user.image,
+    });
+  } catch (error) {
+    res.json(error);
+  }
+};
+module.exports = { registerUser, LoginUser };

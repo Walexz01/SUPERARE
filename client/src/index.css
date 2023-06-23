@@ -124,7 +124,7 @@ header{
   place-items: center;
 }
 .left__content{
-  padding-left: 2rem;
+  padding-left: 1rem 0 1rem 2rem;
 
 }
 .left__content h2{

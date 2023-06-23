@@ -1,24 +1,56 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Formheading from "../../components/Formheading";
 import Inputgroup from "../../components/Inputgroup";
 import Acct__question from "../../components/Acct__question";
 import { useState } from "react";
+import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
 interface Logininput {
   email: string;
   password: string;
 }
 const Login = () => {
+  const navigate = useNavigate();
   const [userInput, setUserInput] = useState<Logininput>({
     email: "",
     password: "",
   });
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    try {
+      const result = await axios.post(
+        "http://localhost:300/api/login",
+        userInput
+      );
+      setUserInput({
+        email: "",
+        password: "",
+      });
+
+      const data = result.data;
+      console.log(data);
+      const success = () => toast.success("Login successful");
+      success();
+
+      setTimeout(() => {
+        navigate("/dashboard");
+      }, 5000);
+    } catch (err: any) {
+      const error = () => toast.error(err.response?.data);
+      error();
+    }
+  };
+
   return (
     <>
+      <ToastContainer autoClose={3000} closeOnClick draggable />
+
       <Formheading
         heading="NFTs Access"
         intro="Please fill your details to access your account."
       />
-      <form className="form">
+      <form className="form" onSubmit={handleSubmit}>
         <Inputgroup
           id="email"
           label="Email"
@@ -43,8 +75,12 @@ const Login = () => {
           <Link to={""}>Forgot Password?</Link>
         </span>
         <div className="auth__btn__group">
-          <button className="auth__btn">Sign in</button>
-          <button className="auth__btn wallet__btn">Sign in with Wallet</button>
+          <button type="submit" className="auth__btn">
+            Sign in
+          </button>
+          <button type="button" className="auth__btn wallet__btn">
+            Sign in with Wallet
+          </button>
         </div>
         <Acct__question
           question="Don't have an account?"
