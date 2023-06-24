@@ -2,14 +2,16 @@ import { Link, useNavigate } from "react-router-dom";
 import Formheading from "../../components/Formheading";
 import Inputgroup from "../../components/Inputgroup";
 import Acct__question from "../../components/Acct__question";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
+import { AuthContext, ContextProps } from "../../context/authContext";
 interface Logininput {
   email: string;
   password: string;
 }
 const Login = () => {
+  const { setCurrentUser } = useContext<ContextProps>(AuthContext);
   const navigate = useNavigate();
   const [userInput, setUserInput] = useState<Logininput>({
     email: "",
@@ -29,7 +31,7 @@ const Login = () => {
       });
 
       const data = result.data;
-      console.log(data);
+      setCurrentUser(data);
       const success = () => toast.success("Login successful");
       success();
 
