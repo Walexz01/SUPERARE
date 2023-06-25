@@ -1,27 +1,27 @@
-import { Flex } from "@chakra-ui/react";
+import { Link, Show } from "@chakra-ui/react";
 import { IconType } from "react-icons";
-import { Link } from "react-router-dom";
-
+import { NavLink as ReactLink } from "react-router-dom";
+import "../../pages/Dashboard/dash.css";
 interface Props {
   icon: IconType;
   label: string;
   path: string;
 }
-const NavLink = ({ icon: Icon, label, path }: Props) => {
-  return (
-    <Flex
-      bgClip={"text"}
-      bgColor={"#1b022a"}
-      alignItems={"center"}
-      gap={"8px"}
-      className="dash_link"
-      width={"100%"}
-      fontSize={"1.2rem"}
-    >
-      <Icon color="#dabcff" />
-      <Link to={path}>{label}</Link>
-    </Flex>
-  );
-};
+const NavLink = ({ icon: Icon, label, path }: Props) => (
+  <Link
+    alignItems={"center"}
+    gap={"8px"}
+    className="dash_link"
+    width={"100%"}
+    color={"#7A797D"}
+    fontSize={{ xl: "1.2rem", lg: "1.6rem" }}
+    display={"flex"}
+    as={ReactLink}
+    to={path}
+  >
+    <Icon />
+    <Show above="xl">{label}</Show>
+  </Link>
+);
 
 export default NavLink;
