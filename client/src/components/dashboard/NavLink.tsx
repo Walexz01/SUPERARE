@@ -14,7 +14,7 @@ const NavLink = ({ icon: Icon, label, path }: Props) => (
     className="dash_link"
     width={"100%"}
     color={"#7A797D"}
-    fontSize={{ xl: "1.2rem", lg: "1.6rem" }}
+    fontSize={{ xl: "1.1rem", lg: "1.3rem" }}
     display={"flex"}
     as={ReactLink}
     to={path}

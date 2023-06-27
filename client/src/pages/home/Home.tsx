@@ -9,7 +9,7 @@ import Partners from "../../components/Partners";
 const Home = () => {
   return (
     <>
-      <header>
+      <header className="header__home">
         <Hero />
       </header>
       <Partners />

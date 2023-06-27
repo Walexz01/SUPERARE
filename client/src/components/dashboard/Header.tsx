@@ -6,33 +6,45 @@ import {
   Input,
   Avatar,
   Hide,
-  Text,
 } from "@chakra-ui/react";
 import image from "../../assets/Clone X 11.png";
 import { BiSearch } from "react-icons/bi";
 import { MdNotifications } from "react-icons/md";
 import { GoThreeBars } from "react-icons/go";
+import Logo from "./Logo";
 
 const Header = () => (
-  <Box py={"1rem"}>
-    <HStack justifyContent={"space-between"} alignItems={"center"} gap={"2rem"}>
-      <InputGroup>
-        <InputLeftElement
-          pointerEvents={"none"}
-          color={"gray.700"}
-          fontSize={"1.2rem"}
-        >
-          <BiSearch />
-        </InputLeftElement>
-        <Input
-          width={"500px"}
-          size={"md"}
-          placeholder="Search Item, Collection and Account.."
-          bgColor={"white"}
-          borderRadius={"2rem"}
-          type="search"
-        />
-      </InputGroup>
+  <Box>
+    <HStack
+      py={"1rem"}
+      px={{ md: "1rem", lg: "0", sm: "10px" }}
+      justifyContent={"space-between"}
+      alignItems={"center"}
+      gap={{ lg: "2rem", md: "10px", sm: "5px" }}
+    >
+      <Hide above="lg">
+        <Logo />
+      </Hide>
+      <Hide below="md">
+        <InputGroup width={"auto"} justifySelf={"center"}>
+          <InputLeftElement
+            pointerEvents={"none"}
+            color={"gray.700"}
+            fontSize={"1.2rem"}
+          >
+            <BiSearch />
+          </InputLeftElement>
+          <Input
+            width={{ lg: "500px", md: "300px" }}
+            size={"md"}
+            placeholder="Search Item, Collection and Account.."
+            bgColor={"white"}
+            borderRadius={"2rem"}
+            type="search"
+          />
+        </InputGroup>
+      </Hide>
+
       <HStack alignItems={"center"} gap={"1.2rem"}>
         <Box
           bgColor={"white"}
@@ -44,7 +56,12 @@ const Header = () => (
         </Box>
         <Avatar bgColor={"black"} src={image}></Avatar>
         <Hide above="lg">
-          <Box className="nav_toggle" pl={"3rem"}>
+          <Box
+            fontSize={"2rem"}
+            className="nav_toggle"
+            pr={"1rem"}
+            pl={".5rem"}
+          >
             <GoThreeBars />
           </Box>
         </Hide>

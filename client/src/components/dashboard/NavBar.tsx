@@ -7,6 +7,7 @@ import { FaSignOutAlt } from "react-icons/fa";
 import { FaWallet } from "react-icons/fa";
 import { AiFillHeart } from "react-icons/ai";
 import NavLink from "./NavLink";
+import Logo from "./Logo";
 
 const NavBar = () => (
   <Box
@@ -20,19 +21,8 @@ const NavBar = () => (
   >
     <Box>
       <Show above="xl">
-        <Box className="logo__container">
-          <Text
-            fontSize={{ xl: "1.2rem", lg: "1.1rem" }}
-            fontFamily={"'DM Serif Display', serif"}
-            letterSpacing={"widest"}
-            fontWeight={"medium"}
-            color={"#bf7cdb"}
-          >
-            SUPERARE
-          </Text>
-        </Box>
+        <Logo />
       </Show>
-
       <Box className="dash__links" pt={{ xl: "2rem", lg: "3rem" }}>
         <VStack
           gap={{ xl: "1rem", lg: "2rem" }}

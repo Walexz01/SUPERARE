@@ -1,3 +1,12 @@
 .dash_link.active{
     color: #5429FF;
 }
+.auct__types a{
+    padding: 3.5px 10px;
+    background-color: none;
+    border-radius: .9rem;
+}
+.auct__types a.active{
+    color: white;
+    background-color: #000E3E;
+}
