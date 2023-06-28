@@ -21,7 +21,7 @@ const Dashboard = () => {
         lg: "grid",
       }}
       gridTemplateColumns={{
-        xl: "220px 1fr 1fr",
+        xl: "200px 1fr 1fr",
         lg: "100px 1fr 1fr",
         md: "1fr",
       }}
@@ -38,7 +38,7 @@ const Dashboard = () => {
           position={"fixed"}
           h={"100vh"}
           width={{
-            xl: "220px",
+            xl: "200px",
             lg: "100px",
           }}
         >

@@ -157,117 +157,159 @@ const Home = () => {
           </SimpleGrid>
         </Box>
       </GridItem>
-      <GridItem w="100%" className="Top creator">
-        <Flex justifyContent={"space-between"}>
-          <Heading size={"md"} pb={"20px"}>
-            Top Creator
-          </Heading>
-          <Link to={"/"}>Sell All</Link>
-        </Flex>
-        <Flex
-          flexDir={"column"}
-          gap="5"
-          bgColor={"white"}
-          borderRadius={"20px"}
-          py={"15px"}
-          px={"10px"}
-        >
-          <Flex className="creator" flex={1} justifyContent={"space-between"}>
-            <Flex alignItems={"center"} gap={"5px"}>
-              <Avatar size={"md"} />
-              <Box>
-                <Heading size={"xs"}>Micheal Johnson</Heading>
-                <Text>@micheal</Text>
-              </Box>
-            </Flex>
-            <Button
-              borderRadius={"1rem"}
-              py={"10px"}
-              fontSize={"1rem"}
-              px={"20px"}
-              colorScheme="teal"
-              variant="outline"
-            >
-              Button
-            </Button>
+      <GridItem w="100%" className="dash_home--right">
+        <Box className="Top creator">
+          <Flex justifyContent={"space-between"}>
+            <Heading size={"md"} pb={"20px"}>
+              Top Creator
+            </Heading>
+            <Link to={"/"}>Sell All</Link>
           </Flex>
-          <Flex className="creator" flex={1} justifyContent={"space-between"}>
-            <Flex alignItems={"center"} gap={"5px"}>
-              <Avatar size={"md"} />
-              <Box>
-                <Heading size={"xs"}>Micheal Johnson</Heading>
-                <Text>@micheal</Text>
-              </Box>
+          <Flex
+            flexDir={"column"}
+            gap="5"
+            bgColor={"white"}
+            borderRadius={"20px"}
+            py={"15px"}
+            px={"10px"}
+          >
+            <Flex className="creator" flex={1} justifyContent={"space-between"}>
+              <Flex alignItems={"center"} gap={"5px"}>
+                <Avatar size={"md"} />
+                <Box>
+                  <Heading size={"xs"}>Micheal Johnson</Heading>
+                  <Text>@micheal</Text>
+                </Box>
+              </Flex>
+              <Button
+                borderRadius={"1rem"}
+                py={"10px"}
+                fontSize={"1rem"}
+                px={"20px"}
+                colorScheme="teal"
+                variant="outline"
+              >
+                Button
+              </Button>
             </Flex>
-            <Button
-              borderRadius={"1rem"}
-              py={"10px"}
-              fontSize={"1rem"}
-              px={"20px"}
-              colorScheme="teal"
-              variant="outline"
-            >
-              Button
-            </Button>
-          </Flex>
-          <Flex className="creator" flex={1} justifyContent={"space-between"}>
-            <Flex alignItems={"center"} gap={"5px"}>
-              <Avatar size={"md"} />
-              <Box>
-                <Heading size={"xs"}>Micheal Johnson</Heading>
-                <Text>@micheal</Text>
-              </Box>
+            <Flex className="creator" flex={1} justifyContent={"space-between"}>
+              <Flex alignItems={"center"} gap={"5px"}>
+                <Avatar size={"md"} />
+                <Box>
+                  <Heading size={"xs"}>Micheal Johnson</Heading>
+                  <Text>@micheal</Text>
+                </Box>
+              </Flex>
+              <Button
+                borderRadius={"1rem"}
+                py={"10px"}
+                fontSize={"1rem"}
+                px={"20px"}
+                colorScheme="teal"
+                variant="outline"
+              >
+                Button
+              </Button>
             </Flex>
-            <Button
-              borderRadius={"1rem"}
-              py={"10px"}
-              fontSize={"1rem"}
-              px={"20px"}
-              colorScheme="teal"
-              variant="outline"
-            >
-              Button
-            </Button>
-          </Flex>
-          <Flex className="creator" flex={1} justifyContent={"space-between"}>
-            <Flex alignItems={"center"} gap={"5px"}>
-              <Avatar size={"md"} />
-              <Box>
-                <Heading size={"xs"}>Micheal Johnson</Heading>
-                <Text>@micheal</Text>
-              </Box>
+            <Flex className="creator" flex={1} justifyContent={"space-between"}>
+              <Flex alignItems={"center"} gap={"5px"}>
+                <Avatar size={"md"} />
+                <Box>
+                  <Heading size={"xs"}>Micheal Johnson</Heading>
+                  <Text>@micheal</Text>
+                </Box>
+              </Flex>
+              <Button
+                borderRadius={"1rem"}
+                py={"10px"}
+                fontSize={"1rem"}
+                px={"20px"}
+                colorScheme="teal"
+                variant="outline"
+              >
+                Button
+              </Button>
             </Flex>
-            <Button
-              borderRadius={"1rem"}
-              py={"10px"}
-              fontSize={"1rem"}
-              px={"20px"}
-              colorScheme="teal"
-              variant="outline"
-            >
-              Button
-            </Button>
-          </Flex>
-          <Flex className="creator" flex={1} justifyContent={"space-between"}>
-            <Flex alignItems={"center"} gap={"5px"}>
-              <Avatar size={"md"} />
-              <Box>
-                <Heading size={"xs"}>Micheal Johnson</Heading>
-                <Text>@micheal</Text>
-              </Box>
+            <Flex className="creator" flex={1} justifyContent={"space-between"}>
+              <Flex alignItems={"center"} gap={"5px"}>
+                <Avatar size={"md"} />
+                <Box>
+                  <Heading size={"xs"}>Micheal Johnson</Heading>
+                  <Text>@micheal</Text>
+                </Box>
+              </Flex>
+              <Button
+                borderRadius={"1rem"}
+                py={"10px"}
+                fontSize={"1rem"}
+                px={"20px"}
+                colorScheme="teal"
+                variant="outline"
+              >
+                Button
+              </Button>
             </Flex>
-            <Button
-              borderRadius={"1rem"}
-              py={"10px"}
-              fontSize={"1rem"}
-              px={"20px"}
-              colorScheme="teal"
-              variant="outline"
-            >
-              Button
-            </Button>
+            <Flex className="creator" flex={1} justifyContent={"space-between"}>
+              <Flex alignItems={"center"} gap={"5px"}>
+                <Avatar size={"md"} />
+                <Box>
+                  <Heading size={"xs"}>Micheal Johnson</Heading>
+                  <Text>@micheal</Text>
+                </Box>
+              </Flex>
+              <Button
+                borderRadius={"1rem"}
+                py={"10px"}
+                fontSize={"1rem"}
+                px={"20px"}
+                colorScheme="teal"
+                variant="outline"
+              >
+                Button
+              </Button>
+            </Flex>
           </Flex>
-        </Flex>
+        </Box>
+        <Box className="featured__creators" py={"1.5rem"}>
+          <Flex justifyContent={"space-between"}>
+            <Heading size={"md"} pb={"20px"}>
+              Featured Creators
+            </Heading>
+            <Link to={"/"}>Sell All</Link>
+          </Flex>
+          <Flex className="featured__creators" flexDir={"column"} gap={"5px"}>
+            <Card maxW="sm" className="bid" borderRadius={"1rem"}>
+              <CardBody p={"10px"}>
+                <Flex gap={"2"} alignItems={"center"} py={"9px"}>
+                  <Avatar size={"md"} />
+                  <Box>
+                    <Heading size={"xs"}>Micheal Johnson</Heading>
+                    <Text>@micheal</Text>
+                  </Box>
+                </Flex>
+
+                <Image
+                  src={background}
+                  width={"100%"}
+                  h={"15rem"}
+                  borderRadius={"1rem"}
+                />
+              </CardBody>
+              <CardFooter
+                pt={"0"}
+                display={"flex"}
+                flexDir={"column"}
+                gap={1}
+                justifyContent={"space-between"}
+              >
+                <Heading fontSize={"1.2rem"}>Curent Bid</Heading>
+                <Text fontSize={"1.2rem"} color={"gray.600"}>
+                  10ETH
+                </Text>
+              </CardFooter>
+            </Card>
+          </Flex>
+        </Box>
       </GridItem>
     </Grid>
   );
