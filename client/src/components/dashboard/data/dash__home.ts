@@ -2,8 +2,6 @@ import homecardheader from '../../../assets/headerbg.png'
 import hotbid1 from '../../../assets/Frame 1.png'
 import hotbid2 from '../../../assets/Magdiel Lopez 15.png'
 import hotbid3 from '../../../assets/Magdiel Lopez 17.png'
-import hotbid4 from '../../../assets/download (1).jfif'
-import hotbid5 from '../../../assets/headerbg.png'
 import profile1 from '../../../assets/Clone X 11.png'
 import profile2 from '../../../assets/Clone X 12.png'
 import profile3 from '../../../assets/Clone X 14.png'
@@ -87,7 +85,7 @@ export const hot__bids:hotBidsType[]=[
  },   
  {
     id:4,
-    image:hotbid4,
+    image:hotbid3,
     heading:'Ape In Love',
     likes:30,
     profileImage: profile4,
@@ -96,7 +94,7 @@ export const hot__bids:hotBidsType[]=[
  },   
  {
     id:5,
-    image:hotbid5,
+    image:hotbid2,
     heading:'Ape In Love',
     likes:28,
     profileImage: profile5,
@@ -105,7 +103,7 @@ export const hot__bids:hotBidsType[]=[
  },   
  {
     id:6,
-    image:hotbid4,
+    image:hotbid1,
     heading:'Ape In Love',
     likes:28,
     profileImage: null,

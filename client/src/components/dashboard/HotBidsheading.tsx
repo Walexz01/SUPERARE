@@ -1,4 +1,4 @@
-import { Flex, Box, Text } from "@chakra-ui/react";
+import { Flex, Box, Text, Hide } from "@chakra-ui/react";
 import Auct__link from "./Auct__link";
 import { auct__link } from "./data/dash__home";
 
@@ -16,9 +16,11 @@ const HotBidsheading = () => {
         className="auct__types"
         color={"black"}
       >
-        {auct__link.map(({ label, path }, index) => (
-          <Auct__link key={index} label={label} path={path} />
-        ))}
+        <Hide below={"md"}>
+          {auct__link.map(({ label, path }, index) => (
+            <Auct__link key={index} label={label} path={path} />
+          ))}
+        </Hide>
       </Box>
     </Flex>
   );

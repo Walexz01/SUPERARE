@@ -13,7 +13,12 @@ import {
 } from "../../components/dashboard/data/dash__home";
 const Home = () => {
   return (
-    <Grid templateColumns="2.5fr 1fr" gap={6} py={"1rem"}>
+    <Grid
+      templateColumns={{ xl: "2.5fr 1fr", lg: "1fr" }}
+      px={"10px"}
+      gap={6}
+      py={"1rem"}
+    >
       <GridItem w="100%">
         <HometopCard
           bgImage={headerCard.bgImage}
@@ -21,7 +26,12 @@ const Home = () => {
         />
         <Box fontFamily={"DM Sans"} className="hot_bids" pt={"3rem"}>
           <HotBidsheading />
-          <SimpleGrid columns={3} spacing={5} className="bids">
+          <SimpleGrid
+            justifyItems={"center"}
+            columns={{ lg: 3, md: 2, sm: 2 }}
+            spacing={5}
+            className="bids"
+          >
             {hot__bids.map(
               ({
                 heading,
@@ -73,7 +83,13 @@ const Home = () => {
             linkLabel="Sell All"
             path="/"
           />
-          <Flex className="featured__creators" flexDir={"column"} gap={"10px"}>
+          <Flex
+            className="featured__creators"
+            flexDir={{ xl: "column", lg: "row" }}
+            flexWrap={"wrap"}
+            justifyContent={"center"}
+            gap={"10px"}
+          >
             {featured__creator.map(
               ({
                 profileImage,

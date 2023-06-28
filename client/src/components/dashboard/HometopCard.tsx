@@ -16,7 +16,7 @@ interface Props {
 const HometopCard = ({ bgImage, heading }: Props) => {
   return (
     <Card
-      p={"4rem"}
+      p={{ xl: "3rem", lg: "3rem", md: "2rem", sm: "1rem" }}
       overflow={"hidden"}
       borderRadius={"1rem"}
       className="discover"
@@ -27,16 +27,16 @@ const HometopCard = ({ bgImage, heading }: Props) => {
     >
       <CardHeader>
         <Heading
-          size={"md"}
-          fontSize={"3.2rem"}
+          size={"lg"}
+          fontSize={{ xl: "2.7rem", lg: "2.6rem", md: "3rem", sm: "2.4rem" }}
           color={"white"}
           fontFamily={"'Ubuntu', sans-serif"}
         >
           {heading}
         </Heading>
       </CardHeader>
-      <CardFooter>
-        <ButtonGroup variant="outline" spacing="6">
+      <CardFooter pt={"10px"}>
+        <ButtonGroup fontSize={"md"} variant="outline" spacing="6">
           <Button
             as={Link}
             to={"/discover"}

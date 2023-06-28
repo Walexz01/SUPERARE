@@ -28,12 +28,7 @@ const FeaturedCreatorCard = ({
           </Box>
         </Flex>
 
-        <Image
-          src={nftImage}
-          width={"100%"}
-          h={"18rem"}
-          borderRadius={"1rem"}
-        />
+        <Image src={nftImage} width={"100%"} borderRadius={"1rem"} />
       </CardBody>
       <CardFooter
         pt={"0"}
